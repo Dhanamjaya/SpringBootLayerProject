@@ -1,0 +1,56 @@
+server:
+  port: 7078
+  servlet:
+    context-path: /webxml
+spring:
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
+  devtools:
+    restart:
+      enabled: true
+  profiles:
+    active: mysql,actuators,myemail
+---
+spring:
+  profiles: h2
+  h2:
+    console:
+      enabled: true
+  jpa:
+    show-sql: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+---
+spring:
+  profiles: mysql
+  datasource:
+    password: root
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL55Dialect 
+
+---
+spring:
+  profiles: actuators
+---
+spring:
+  profiles: myemail
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: dhanamjaya.kakarla@gmail.com
+    password: dhanaMjaya@786
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+            required: true
+        auth: true

@@ -1,0 +1,4 @@
+applications:
+- name: SpringBootLayerProject
+  memory: 750M 
+  path: target/SpringBootLayerProject-2.0.war
