@@ -33,24 +33,6 @@ public class SynchronyController {
 		Long l=iSynchronyService.count();
 		System.out.println(l);
 	
-		System.out.println("================================");
-		
-		System.out.println("================================");
-		String syfone=iSynchronyService.getDetails(20);
-		System.out.println(" syfLoc:"+ syfone);
-		
-		System.out.println("================================");
-		Object ob=iSynchronyService.getMultiDetails(20);
-		//internally call Object[]
-		
-		Object[] obArr=(Object[])ob;
-		System.out.println(obArr[0]+"-"+obArr[1]);
-		
-		
-		
-		
-		
-			
 		
 	}
 
