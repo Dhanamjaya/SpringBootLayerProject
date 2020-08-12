@@ -32,6 +32,7 @@ public class SynchronyController {
 	
 		Long l=iSynchronyService.count();
 		System.out.println(l);
+		System.out.println("==========");
 	
 		
 	}
