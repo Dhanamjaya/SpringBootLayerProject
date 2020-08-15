@@ -9,6 +9,8 @@ public class SpringBootLayerProjectApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootLayerProjectApplication.class, args);
+		
+		System.out.println("Hello");
 	}
 
 }
