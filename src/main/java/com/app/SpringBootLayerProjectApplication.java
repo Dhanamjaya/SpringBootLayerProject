@@ -11,6 +11,7 @@ public class SpringBootLayerProjectApplication {
 		SpringApplication.run(SpringBootLayerProjectApplication.class, args);
 		
 		System.out.println("Hello");
+		System.out.println("Hi");
 	}
 
 }
